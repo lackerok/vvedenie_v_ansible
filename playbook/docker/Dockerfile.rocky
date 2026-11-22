@@ -1,0 +1,6 @@
+FROM rockylinux:9
+
+RUN dnf install -y python3 \
+    && dnf clean all
+
+CMD ["sleep", "infinity"]

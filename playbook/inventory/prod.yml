@@ -1,0 +1,18 @@
+---
+el:
+  hosts:
+    rocky9:
+      ansible_connection: community.docker.docker
+      ansible_python_interpreter: /usr/bin/python3
+
+deb:
+  hosts:
+    ubuntu:
+      ansible_connection: community.docker.docker
+      ansible_python_interpreter: /usr/bin/python3
+
+local:
+  hosts:
+    localhost:
+      ansible_connection: ansible.builtin.local
+      ansible_python_interpreter: "{{ ansible_playbook_python }}"
